@@ -1,1 +1,3 @@
 # studimage
+
+enter admission number to get photo...

@@ -15,23 +15,23 @@
             height: 100vh;
             margin: 0;
             color: #f5f5f5;
-            text-align: center; /* Ensures text is centered */
+            text-align: center; 
         }
 
         .container {
             margin: 100px auto 0;
-            display: flex; /* Enable flexbox */
-            flex-direction: column; /* Stack content vertically */
-            justify-content: center; /* Center content vertically */
-            align-items: center; /* Center content horizontally */
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
             background: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             padding: 30px;
             padding-bottom: 69px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
             transition: transform 0.3s;
-            max-width: 450px; /* Limit width of the container */
-            width: 100%; /* Ensure it takes full width within the max-width */
+            max-width: 450px; 
+            width: 100%;
         }
 
         .container:hover {
@@ -53,8 +53,8 @@
             align-items: center;
             gap: 15px;
             border: 4px solid #000;
-            width: 100%; /* Ensure it stretches across the available width */
-            max-width: 350px; /* Limit the width */
+            width: 100%;
+            max-width: 350px; 
             transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
             transform-style: preserve-3d;
             transform: rotateX(10deg) rotateY(-10deg);
@@ -197,7 +197,7 @@
                     ></path>
                 </svg>
             </button>
-            <!-- Changed the SVG button to a text button -->
+       
           <div class="shadow__input"></div>
           <input
             type="text"
@@ -220,35 +220,35 @@
             const studentImage = document.getElementById('studentImage');
             const errorMessage = document.getElementById('errorMessage');
 
-            // Reset image visibility and error message
-            studentImage.classList.remove('visible');
-            studentImage.src = ''; // Clear previous image
-            errorMessage.style.display = 'none'; // Hide error message
 
-            // Set new image source
+            studentImage.classList.remove('visible');
+            studentImage.src = ''; 
+            errorMessage.style.display = 'none';
+
+
             studentImage.src = imageUrl;
 
-            // Wait for the image to load before making it visible
+
             studentImage.onload = () => {
                 studentImage.classList.add('visible');
             };
 
-            // Handle image not found
+           
             studentImage.onerror = () => {
-                errorMessage.style.display = 'block'; // Show error message
-                studentImage.src = ''; // Clear image
-                studentImage.classList.remove('visible'); // Ensure image is hidden
+                errorMessage.style.display = 'block'; 
+                studentImage.src = ''; 
+                studentImage.classList.remove('visible');
 
-                // Optionally hide error message after a timeout
+              
                 setTimeout(() => {
                     errorMessage.style.display = 'none';
-                }, 3000); // Hide after 3 seconds
+                }, 3000); 
             };
         }
-        // Trigger the function on Enter key press
+       
         document.getElementById('admissionNo').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
-                showImage(); // Call the function
+                showImage(); 
             }
         });
     </script>

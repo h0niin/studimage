@@ -1,4 +1,4 @@
 # studimage
-created on 9/11/24
+9/11/24
 
 enter admission number to get photo...
